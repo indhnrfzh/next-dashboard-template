@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     experimental: {
-    //   ppr: 'inc/remental',
+      // ppr: 'inc/remental',
     },
   };
    
