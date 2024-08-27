@@ -12,7 +12,7 @@ export default function Pagination({ totalPages }) {
   const searchParams = useSearchParams();
   const currentPage = Number(searchParams.get("page")) || 1;
   // const allPages = generatePagination(CurrencyDollarIcon, totalPages);
-
+  
   const createPageURL = (pageNumber) => {
     const params = new URLSearchParams(searchParams);
     params.set("page", pageNumber.toString());
