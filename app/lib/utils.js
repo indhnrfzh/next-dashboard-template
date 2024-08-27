@@ -17,6 +17,11 @@ export const formatDateToLocal = (dateStr, locale = 'en-US') => {
 };
 
 export const generateYAxis = (revenue) => {
+  // Pastikan revenue adalah array dan tidak undefined/null
+  if (!Array.isArray(revenue) || revenue.length === 0) {
+    return { yAxisLabels: [], topLabel: 0 };
+  }
+
   // Calculate what labels we need to display on the y-axis
   // based on highest record and in 1000s
   const yAxisLabels = [];
@@ -29,6 +34,7 @@ export const generateYAxis = (revenue) => {
 
   return { yAxisLabels, topLabel };
 };
+
 
 export const generatePagination = (currentPage, totalPages) => {
   // If the total number of pages is 7 or less,
