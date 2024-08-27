@@ -4,5 +4,5 @@ const nextConfig = {
       // ppr: 'inc/remental',
     },
   };
-   
+  
   export default nextConfig;
